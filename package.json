@@ -1,0 +1,17 @@
+{
+  "name": "mimoji",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ericmai624/mimoji.git",
+  "author": "eric mai <enmai1988@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
