@@ -4,8 +4,10 @@ html(lang="en")
     title= "mimoji"
     script(type="text/javascript", src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js").
     style(type="text/css").
-      #player {
-        --splash-image: url('/assets/1F425134613.jpg');
+      .splash {
+        background-image: url('assets/1F425134613.jpg');
+        background-size: 1920px 1080px;
+        background-repeat: no-repeat;
       }
   body
     <cast-media-player id="player"></cast-media-player>
