@@ -8,10 +8,12 @@ playbackConfig.initialBandwidth = 10 * 1024 * 1024;
 const playerManager = context.getPlayerManager();
 
 /* Customer messages */
-const ADD_TEXTTRACK = 'urn:x-cast:texttrack.add';
+const ADD_TEXTTRACK = 'urn:x-cast:texttrack.update';
 const handleAddTextTrackMessage = e => {
-  // Create text tracks object
   const textTracksManager = playerManager.getTextTracksManager();
+  textTracksManager.setActiveByIds(null); // remove current text track
+
+  // Create text tracks object
   const track = textTracksManager.createTrack();
   track.trackId = Math.round(Math.random() * 100);
   track.trackContentType = 'text/vtt';
