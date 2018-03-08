@@ -15,4 +15,12 @@ app.set('view engine', 'pug');
 
 app.get('/', (req, res) => res.render('index'));
 
+app.get('/keepalive', (req, res) => setTimeout(() => {
+  request.get('https://mimoji.herokuapp.com/keepalive', (err, response, body) => {});
+}, 15 * 60 * 1000));
+
 app.listen(port, () => console.log(`Ready to accept connections on port ${port}`));
+
+setTimeout(() => {
+  request.get('https://mimoji.herokuapp.com/keepalive', (err, response, body) => {});
+}, 15 * 60 * 1000)
